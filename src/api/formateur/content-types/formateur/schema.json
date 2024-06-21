@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "formateurs",
+  "info": {
+    "singularName": "formateur",
+    "pluralName": "formateurs",
+    "displayName": "formateur"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nomComplet": {
+      "type": "string"
+    },
+    "numTel": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "formations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::formation.formation",
+      "inversedBy": "formateurs"
+    }
+  }
+}
