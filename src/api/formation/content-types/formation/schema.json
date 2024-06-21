@@ -36,11 +36,11 @@
       "target": "api::formateur.formateur",
       "mappedBy": "formations"
     },
-    "content": {
+    "contents": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::content.content",
-      "inversedBy": "formations"
+      "mappedBy": "formation"
     }
   }
 }

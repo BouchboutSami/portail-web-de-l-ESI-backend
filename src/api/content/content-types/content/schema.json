@@ -17,11 +17,11 @@
     "duree": {
       "type": "integer"
     },
-    "formations": {
+    "formation": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::formation.formation",
-      "mappedBy": "content"
+      "inversedBy": "contents"
     }
   }
 }

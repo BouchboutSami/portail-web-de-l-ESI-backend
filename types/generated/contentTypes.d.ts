@@ -831,9 +831,9 @@ export interface ApiContentContent extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     duree: Attribute.Integer;
-    formations: Attribute.Relation<
+    formation: Attribute.Relation<
       'api::content.content',
-      'oneToMany',
+      'manyToOne',
       'api::formation.formation'
     >;
     createdAt: Attribute.DateTime;
@@ -953,9 +953,9 @@ export interface ApiFormationFormation extends Schema.CollectionType {
       'manyToMany',
       'api::formateur.formateur'
     >;
-    content: Attribute.Relation<
+    contents: Attribute.Relation<
       'api::formation.formation',
-      'manyToOne',
+      'oneToMany',
       'api::content.content'
     >;
     createdAt: Attribute.DateTime;
